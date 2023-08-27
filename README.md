@@ -28,6 +28,16 @@ The Zero-Shot Replication Framework is a minimal environment designed to replica
 <!-- | *Other*              |                    |                    |          |            |            |                  |                |          |
 | EvalPlus             | 59.1               | 54.2               | 54.9     | 80.5       | 74.4       | 60.3             | N/A            |          | -->
 
+## Zero Shot Variance
+Some investigation were done on the error of zero-shot score on different runs of a smaller, 500 question set taken from gsm8k.
+
+| Category             | gpt-3.5-turbo-0301 | gpt-3.5-turbo-0613 | claude-2 | gpt-4-0314 | gpt-4-0613 | wizard-coder-34b | gpt-4 Baseline | Sources  |
+|----------------------|--------------------|--------------------|----------|------------|------------|------------------|----------------|----------|
+| smaller-GSM8K        |                    | 71.0 +- 2.3        |          |            |            |                  |                |          |
+| smaller-GSM8K (best) |                    | 75.4               |          |            |            |                  |                |          |
+| smaller-GSM8K (worst)|                    | 67.6               |          |            |            |                  |                |          |
+
+
 ## Features
 
 - Easy configuration of models and parameters.
